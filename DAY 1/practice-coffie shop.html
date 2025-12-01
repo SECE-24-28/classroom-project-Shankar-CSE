@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+
+
+    th, td, tr, table{
+        border:solid black;
+        border-collapse: collapse;
+    }
+    
+    nav{
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 70%;
+        margin-top: -15px;
+        margin-left: 10rem;
+        background-color: black;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
+        top: 7px;
+        a{
+            text-decoration: none;
+            color: white;
+            transition: transform 0.5s;
+        }
+        a:hover{
+            transform: scale(1.5) ;
+           
+        }
+        button{
+            background-color: black;
+            border: none;
+            font-size: 20px;
+            padding: 5px;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        button:hover{
+            background-color: black;
+            transform: scale(1.7);
+        }
+
+        
+        
+    }
+</style>
+
+
+</head>
+
+<body>
+    <nav>
+        <button>
+        <a href="#home">Home</a>
+
+        </button>
+         <button>
+             <a href="#menu">Menu</a>
+         </button>
+         <button>
+             <a href="#about">About</a>
+         </button>
+    <button>
+        <a href="#contact">Contact</a>
+    </button>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Coffee Shop</h1>
+        <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?cs=srgb&dl=pexels-chevanon-312418.jpg&fm=jpg" alt="shankar " width="200" height="200">
+    </section>
+    
+
+
+
+
+<section id="menu">
+
+    <h1>Menu</h1>
+
+    <table  >
+        <caption>Hot Drinks</caption>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Espresso</td>
+            <td>Single shot of rich espresso</td>
+            <td>₹80</td>
+        </tr>
+        <tr>
+            <td>Cappuccino</td>
+            <td>Espresso with steamed milk and foam</td>
+            <td>₹150</td>
+        </tr>
+        <tr>
+            <td>Lattle</td>
+            <td>Smooth espresso with steamed milk</td>
+            <td>₹160</td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+
+
+
+
+
+    <table>
+        <caption>Cold Drinks & Bakery</caption>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>Iced Americano</td>
+            <td>Espresso over ice and cold water</td>
+            <td>₹140</td>
+        </tr>
+        <tr>
+            <td>Cold Brew</td>
+            <td>Smooth cold brewed coffee</td>
+            <td>₹170</td>
+        </tr>
+        <tr>
+            <td>Chocolate Muffin</td>
+            <td>Freshly backed daily</td>
+            <td>₹160</td>
+        </tr>
+
+    </table>
+
+    </section>
+
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>At Coffee Shop, we are passionate about delivering the finest coffee experience. 
+            Our beans are sourced from the best plantations around the world, ensuring a rich
+             and flavorful cup every time. Whether you're looking for a quick espresso or a 
+             relaxing latte, our skilled baristas are here to serve you with a smile.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Email: abcd@gmail.com</p>
+        <p>Phone: +91 9876543210</p>
+    </section>
+
+
+
+</body>
+</html>
