@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .card{
+            box-shadow: 5px 5px 10px gray;
+            padding: 20px 20px;
+            border-radius: 20px;
+            height: 50px;
+            width: 250px;
+            max-width: 100%;
+            background-color: tomato;
+        }
+        .sub-container{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            img{
+                box-shadow: 5px 5px 10px gray;
+                border-radius: 20px;
+                width: 300px;
+                height: 200px;
+                font-size: 18px;
+            }
+            p{
+               
+                padding: 20px 20px;
+                border-radius: 20px;
+                max-width: 600px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Responsive FlexBox Cards</h1>
+<div class="container">
+    <div class="card">Card-1</div>
+    <div class="card">Card-2</div>
+    <div class="card">Card-3</div>
+    </div>
+
+      <div class="sub-container">
+       <img src="https://picsum.photos/300/300">
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam accusantium ipsum, quod pariatur dolorum soluta, perspiciatis rem iusto iste quidem et mollitia. Voluptatum, a neque! Deleniti, incidunt iste. Quis, deleniti.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus officiis beatae doloribus aliquam fugit provident suscipit cum atque enim quisquam vel odio, amet nulla facere delectus praesentium. Inventore, sit tempora.
+       </p>
+    </div>
+</body>
+</html>
