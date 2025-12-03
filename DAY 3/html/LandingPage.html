@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #My_video{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -50;
+            object-fit: cover;
+        }
+        nav{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0% 0 20px 20px;
+            background-color: black;
+            color: white;
+            min-width: 100%;
+            position: fixed;
+        }
+
+        .navigate{
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            padding-right: 20px;
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+
+        }
+        a:hover{
+            color: lightgreen;
+        }
+
+        .sec{
+             background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+             h3{
+                font-size: 1.5rem;
+                text-decoration: underline;
+            }
+              p{
+                font-size: 1rem;
+                width: 50%;
+                text-align: center;
+            }
+        }
+
+        
+        #home{
+            /* background-color: black; */
+            button{
+                padding: 10px 20px;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: wheat;
+                color: black;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: black;
+                color: wheat;
+            }
+        }
+        h5{
+            text-align: start;
+            margin-bottom: 0;
+            margin-top: 0;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <video width="320" height="240"  id="My_video" autoplay loop muted >
+  <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<nav>
+    <h1 style="margin-left: 20px;">Big Buck Bunny</h1>
+
+    <ol class="navigate">
+        <li>
+            <a href="#home">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#about">
+                About
+            </a>
+        </li>
+        <li>
+             <a href="#char">
+            Characters
+            </a>
+        </li>
+        
+        <li>
+             <a href="#story">
+            Story
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<div id="home" class="sec">
+   <h2>Welcome to Big Buck Bunny</h2>
+   <p>A light-hearted animated adventure about a gentle giant who finally stands up for himself.</p>
+    <button>Watch Trailer</button>
+</div>
+
+<div class="sec" id="about">
+<h3>ABOUT THE MOVIE</h3>
+<p>Big Buck Bunny is a comedy-driven animated short featuring a peaceful and kind-hearted rabbit who lives in a colorful forest. His quiet life is turned upside down when a mischievous trio of rodents start causing chaos — and Big Buck Bunny decides it’s finally time to take a stand. The film is known for its charming humor, beautiful animation, and expressive characters.</p>
+
+<p>Key Highlights</p>
+<ul>
+    <li>Genre: Animation / Comedy / Short</li>
+    <li>Story Theme: Kindness, courage, and standing up against bullies</li>
+    <li>Runtime: ~10 minutes</li>
+    <li>Production: Created with open-source animation technology</li>
+    <li>Audience: Family-friendly</li>
+</ul>
+</div>
+
+<div class="sec" id="char">
+<h3>CHARACTERS</h3>
+Big Buck Bunny</h5>
+
+<p>A gentle giant of the forest. He loves sunbathing, gardening, and butterflies. Despite his size, he’s soft-hearted — until pushed too far.
+</p>
+<h5>Frank (the leader of the bullies)</h5>
+
+<p>Sneaky, loud, and always looking for trouble. Frank leads the trio of forest pranksters.</p>
+
+<h5>Rinky</h5>
+
+<p>A small rodent with big energy. Loves chaotic fun and causing mayhem.</p>
+
+<h5>Gamera</h5>
+<p>Sly and slow-moving but full of bad ideas. Often the brains behind the trio’s pranks.
+</p>
+</div>
+
+<div class="sec" id="story">
+<h3>STORY</h3>
+<p>The film follows a peaceful bunny enjoying his day in a vibrant forest. Three troublemaking rodents interrupt his calm life with cruel pranks. After tolerating their mischief for too long, the bunny finally decides to fight back — but in his own comedic and clever way. The story unfolds with humor, fast-paced action, and a satisfying moment of justice.</p>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input class="" type="text" name="value1" id="value1" placeholder="num1">
+    <input type="text" name="value2" id="value2" placeholder="num2">
+    <input type="text" name="result" id="result" placeholder="result">
+    <button onclick='calculate("+")'>
+      +
+    </button>
+    <button onclick='calculate("-")'>
+      -
+    </button>
+    <button onclick='calculate("*")'>
+      *
+    </button>
+    <button onclick='calculate("/")'>
+      /
+    </button>
+
+    
+
+    <script>
+        let a;
+        let b;
+       
+       function calculate(operation){
+        
+        a = parseFloat(document.getElementById("value1").value);
+        b = parseFloat(document.getElementById("value2").value);
+        ans = document.getElementById("result");
+
+        if(operation == "+"){
+            ans.value = a + b;
+        }
+        else if(operation == "-"){
+            ans.value = a - b;
+        }
+        else if(operation == "*"){
+            ans.value = a * b;
+        }
+        else if(operation == "/"){
+            ans.value = a / b;
+
+        }
+       
+    }
+        
+    </script>
+</body>
+</html>

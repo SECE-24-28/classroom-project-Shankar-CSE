@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="hello()">
+      say Hello 
+    </button>
+<br>
+    <input type="text" name="input1" id="input1">
+    <input type="text" name="input2" id="input2">
+
+    <button onclick="callme()">
+      Copy Text
+    </button>
+
+    <br>
+
+     <input type="text" name="value1" id="value1" placeholder="num1">
+    <input type="text" name="value2" id="value2" placeholder="num2">
+    <input type="text" name="result" id="result" placeholder="result">
+    <button onclick="calculate()">
+      +
+    </button>
+
+
+<img src="../html/Coffee.png" alt="Coffee" id="img" height="200px" width="200px">
+<button onclick="change()">next</button>
+<button onclick="change()">previous</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        
+
+        function hello(){
+            alert("Hello, welcome to JavaScript!");
+        }
+
+        callme = () =>{
+            let value = document.getElementById("input1").value;
+            document.getElementById("input2").value= value;
+        }
+
+        calculate = () =>{
+            let a = document.getElementById("value1").value;
+            let b = document.getElementById("value2").value;
+            let sum = parseFloat(a) + parseFloat(b);
+            document.getElementById("result").value = sum;
+        }
+
+        change = () =>{
+            let img = document.getElementById("img");
+            // img.src = "../html/FB.png"   
+
+            let imgurl1 = "../html/Coffee.png"
+            let imgurl2 = "../html/FB.png";
+
+            if(img.src.endsWith("Coffee.png")){
+                img.src = imgurl2;
+            }
+            else{
+                img.src = imgurl1;
+            }
+        }
+
+        
+        
+    </script>
+</body>
+</html>
