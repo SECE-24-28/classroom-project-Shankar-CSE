@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+
+    <ol id="list"></ol>
+
+    
+
+    <script>
+  
+    
+        let url = 'https://jsonplaceholder.typicode.com/posts';
+        let list = document.getElementById("list");
+        let search = document.getElementById("input");
+
+        search.addEventListener("input", function(){
+            let searchValue = search.value.toLowerCase();
+            let items = list.getElementsByTagName("li");
+            for(let item of items){
+                if(item.innerHTML.toLowerCase().includes(searchValue)){
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            }
+        })
+    
+
+
+    
+
+       fullData = async () =>{
+            let data = await fetch(url);
+            data = await data.json();
+            let result = [];
+            for(let obj of data){
+                result
+                .push(      `
+                            UserId:${obj.userId}<br/> <br/>
+                            id:${obj.id}<br/> <br/>
+                            title:${obj.title}<br/><br/>
+                            body:${obj.body}<br/><br/>
+                         `);
+
+                         list.appendChild(document.createElement("li")).innerHTML = result[result.length - 1];
+            }
+
+
+
+         
+        }
+        fullData();
+   
+    </script>
+</body>
+</html>

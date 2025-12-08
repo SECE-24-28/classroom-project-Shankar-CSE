@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="RawData()">Raw Data</button>
+    <br>
+    <p>
+        Raw Data:
+    </p>
+    <p id="p1"></p>
+
+     <button onclick="fullData()">Raw Data</button>
+    <p>Structured Data:</p>
+    <p id="p2"></p>
+
+    <button onclick="go()">google</button>
+    
+
+    <script>
+      go =  () =>
+    {
+        window.location.href = "tile.html"
+      
+    }
+    
+        let url = 'https://jsonplaceholder.typicode.com/posts';
+        let rawdataurl = "https://jsonplaceholder.typicode.com/posts/1";
+        
+       RawData = async () =>{
+         let p1 = document.getElementById('p1');
+            p1.innerHTML = "Loading...";
+
+            let data1 = await fetch(rawdataurl);
+            data1 = await data1.json();
+            rawdata = JSON.stringify(data1);
+            // let p1 = document.getElementById('p1');
+            p1.innerHTML = rawdata+"<br/><br/><br/>";
+       }
+
+       fullData = async () =>{
+            let p2 = document.getElementById('p2');
+            p2.innerHTML = "Loading...";
+            let data = await fetch(url);
+            data = await data.json();
+            let result = "";
+            for(let obj of data){
+                result += `
+                            UserId:${obj.userId}<br/> <br/>
+                            id:${obj.id}<br/> <br/>
+                            title:${obj.title}<br/><br/>
+                            body:${obj.body}<br/><br/>
+                         `;
+            }
+
+        //    window.location.href = "https://google.com"
+
+            p2.innerHTML = result;
+        }
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <script>
+        let a = document.getElementById('p1');
+        let b = document.getElementById('p2');
+        let obj = {
+            name: "Shan",
+            age: 22,
+            city: "Chennai"
+        };
+        a.innerHTML = JSON.stringify(obj);
+        b.innerHTML = `Name: ${obj.name} <br> Age: ${obj.age} <br> City: ${obj.city}`;
+        
+    </script>
+    
+</body>
+</html>
