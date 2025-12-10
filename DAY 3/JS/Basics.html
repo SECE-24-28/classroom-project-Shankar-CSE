@@ -3,96 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        img {
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 10px;
+            border: none;
+            background: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #333;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="hello()">
-      say Hello 
-    </button>
-<br>
-    <input type="text" name="input1" id="input1">
-    <input type="text" name="input2" id="input2">
 
-    <button onclick="callme()">
-      Copy Text
-    </button>
+    <h2>Simple Image Gallery</h2>
+
+    <img id="img" src="../html/Coffee.png" alt="Gallery Image" height="250" width="250">
 
     <br>
 
-     <input type="text" name="value1" id="value1" placeholder="num1">
-    <input type="text" name="value2" id="value2" placeholder="num2">
-    <input type="text" name="result" id="result" placeholder="result">
-    <button onclick="calculate()">
-      +
-    </button>
-
-
-<img src="../html/Coffee.png" alt="Coffee" id="img" height="200px" width="200px">
-<button onclick="change()">next</button>
-<button onclick="change()">previous</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <button onclick="showPrev()">Previous</button>
+    <button onclick="showNext()">Next</button>
 
     <script>
+        // List of gallery images
+        let images = [
+            "https://4kwallpapers.com/images/walls/thumbs_3t/24655.jpg",
+            "https://4kwallpapers.com/images/walls/thumbs_3t/24698.jpg",
+            "https://4kwallpapers.com/images/walls/thumbs_3t/24611.jpg",
+            "https://4kwallpapers.com/images/walls/thumbs_3t/24715.jpg",
+            "https://4kwallpapers.com/images/walls/thumbs_3t/24717.jpg"
+        ];
 
-        
+        let index = 0;
 
-        function hello(){
-            alert("Hello, welcome to JavaScript!");
+        function showImage() {
+            document.getElementById("img").src = images[index];
         }
 
-        callme = () =>{
-            let value = document.getElementById("input1").value;
-            document.getElementById("input2").value= value;
+        function showNext() {
+            index = (index + 1) % images.length;
+            showImage();
         }
 
-        calculate = () =>{
-            let a = document.getElementById("value1").value;
-            let b = document.getElementById("value2").value;
-            let sum = parseFloat(a) + parseFloat(b);
-            document.getElementById("result").value = sum;
+        function showPrev() {
+            index = (index - 1 + images.length) % images.length;
+            showImage();
         }
 
-        change = () =>{
-            let img = document.getElementById("img");
-            // img.src = "../html/FB.png"   
-
-            let imgurl1 = "../html/Coffee.png"
-            let imgurl2 = "../html/FB.png";
-
-            if(img.src.endsWith("Coffee.png")){
-                img.src = imgurl2;
-            }
-            else{
-                img.src = imgurl1;
-            }
-        }
-
-        
-        
+        // Initialize the displayed image on load
+        showImage();
     </script>
+
 </body>
 </html>
