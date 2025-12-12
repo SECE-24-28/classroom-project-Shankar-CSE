@@ -1,0 +1,19 @@
+{
+  "student": [
+    {
+      "sid": 1,
+      "name": "student 1",
+      "mark": 55
+    },
+    {
+      "sid": 2,
+      "name": "student 2",
+      "mark": 99
+    },
+    {
+      "sid": 3,
+      "name": "student 3",
+      "mark": 85
+    }
+  ]
+}
